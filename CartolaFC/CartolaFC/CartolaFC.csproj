@@ -64,11 +64,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\TecnicoController.cs" />
     <Compile Include="Controllers\TimeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infra\DbComum.cs" />
+    <Compile Include="Infra\Mensagens.cs" />
     <Compile Include="Migrations\201205230302191_BDInicial.cs" />
     <Compile Include="Migrations\201205230302191_BDInicial.Designer.cs">
       <DependentUpon>201205230302191_BDInicial.cs</DependentUpon>
@@ -77,7 +79,12 @@
     <Compile Include="Migrations\201205230321086_AdicionadoValidacao.Designer.cs">
       <DependentUpon>201205230321086_AdicionadoValidacao.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201205300116533_CriadoTecnico.cs" />
+    <Compile Include="Migrations\201205300116533_CriadoTecnico.Designer.cs">
+      <DependentUpon>201205300116533_CriadoTecnico.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Tecnico.cs" />
     <Compile Include="Models\Time.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -163,6 +170,21 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Time\Detalhes.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Tecnico\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Tecnico\Cadastrar.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Tecnico\Editar.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Tecnico\Excluir.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Tecnico\Detalhes.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

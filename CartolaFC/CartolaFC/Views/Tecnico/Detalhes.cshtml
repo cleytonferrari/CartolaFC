@@ -1,0 +1,26 @@
+﻿@model CartolaFC.Models.Tecnico
+@{
+    ViewBag.Title = "Detalhes do Técnico";
+}
+<h2>
+    Detalhes do Técnico</h2>
+<fieldset>
+    <legend>Técnico</legend>
+    <div>
+        @Html.LabelFor(model => model.Nome)
+    </div>
+    <div>
+        @Html.DisplayFor(model => model.Nome)
+    </div>
+
+    <div>
+        @Html.LabelFor(model => model.Descricao)
+    </div>
+    <div>
+        @Html.DisplayFor(model => model.Descricao)
+    </div>
+</fieldset>
+<p>
+    <a href="@Url.Action("Editar", "Tecnico", new { id = Model.TecnicoId })" class="voltar">Editar</a>
+    <a href="@Url.Action("Index", "Tecnico")" class="voltar">Voltar</a>
+</p>

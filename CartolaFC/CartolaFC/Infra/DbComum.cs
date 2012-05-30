@@ -11,5 +11,6 @@ namespace CartolaFC.Infra
         }
 
         public DbSet<Time> Times { get; set; }
+        public DbSet<Tecnico> Tecnicos { get; set; } 
     }
 }

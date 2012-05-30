@@ -1,0 +1,31 @@
+﻿@model IEnumerable<CartolaFC.Models.Tecnico>
+@{
+    ViewBag.Title = "Listagem de Técnico";
+}
+<h2>
+    Listagem de Técnico</h2>
+<p>
+    <a href="@Url.Action("Cadastrar", "Tecnico")" class="voltar">Cadatrar novo Técnico</a>
+</p>
+<table>
+    <tr>
+        <th>
+            Nome
+        </th>
+        <th>
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.Nome
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Editar", new { id = item.TecnicoId })
+                @Html.ActionLink("Excluir", "Excluir", new { id = item.TecnicoId })
+                @Html.ActionLink("Detalhes", "Detalhes", new { id = item.TecnicoId })
+            </td>
+        </tr>
+    }
+</table>

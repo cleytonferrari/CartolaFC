@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using CartolaFC.Infra;
 
 namespace CartolaFC.Models
 {
@@ -6,13 +7,13 @@ namespace CartolaFC.Models
     {
         public int TimeId { get; set; }
 
-        [Required(ErrorMessage = "Preencha este campo!")]
-        [StringLength(50,MinimumLength = 2, ErrorMessage = "O Campo Nome pode ter no máximo 50 caracteres.")]
+        [Required(ErrorMessage = Mensagens.Time.NomeDeveSerpreenchido)]
+        [StringLength(50,MinimumLength = 2, ErrorMessage = Mensagens.Time.NomeDeveTerDe2A50Caracteres)]
         [Display(Name = "Nome do Time:")]
         public string Nome { get; set; }
         
-        [Required(ErrorMessage = "Preencha este campo!")]
-        [StringLength(4, MinimumLength = 4, ErrorMessage = "O campo deve ter 4 caracteres. ex.: 2000")]
+        [Required(ErrorMessage = Mensagens.Time.AnoDeFundacaoDeveSerPreenchido)]
+        [StringLength(4, MinimumLength = 4, ErrorMessage = Mensagens.Time.AnoDeFundacaoDeveTer4Caracteres)]
         [Display(Name = "Ano de Fundação:")]
         public string AnoDeFundacao { get; set; }
         

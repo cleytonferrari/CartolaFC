@@ -1,12 +1,12 @@
-﻿@model CartolaFC.Models.Time
+﻿@model CartolaFC.Models.Tecnico
 @{
-    ViewBag.Title = "Exclui Times";
+    ViewBag.Title = "Excluir Técnico";
 }
 
 <h2>Excluir</h2>
 <h3>Deseja mesmo excluir?</h3>
 <fieldset>
-    <legend>Time</legend>
+    <legend>Técnico</legend>
     <div>
         @Html.LabelFor(model=>model.Nome)
     </div>
@@ -15,18 +15,16 @@
     </div>
     
     <div>
-        @Html.LabelFor(model=>model.AnoDeFundacao)
+        @Html.LabelFor(model=>model.Descricao)
     </div>
     <div>
-        @Html.DisplayFor(model=>model.AnoDeFundacao)
+        @Html.DisplayFor(model=>model.Descricao)
     </div>
 </fieldset>
 @using(Html.BeginForm())
 {
     <p>
         <input type="submit" value="Excluir"/>
-        <a href="@Url.Action("Index","Time")" class="voltar">Voltar</a>
+        <a href="@Url.Action("Index","Tecnico")" class="voltar">Voltar</a>
     </p>
 }
-
-

@@ -9,15 +9,14 @@ using CartolaFC.Models;
 
 namespace CartolaFC.Controllers
 {
-    public class TimeController : Controller
+    public class TecnicoController : Controller
     {
-        private DbComum db = new DbComum();
+        private readonly DbComum db = new DbComum();
 
         public ActionResult Index()
         {
-            return View(db.Times.ToList());
+            return View(db.Tecnicos.ToList());
         }
-
 
         public ActionResult Cadastrar()
         {
@@ -25,54 +24,54 @@ namespace CartolaFC.Controllers
         }
 
         [HttpPost]
-        public ActionResult Cadastrar(Time time)
+        public ActionResult Cadastrar(Tecnico tecnico)
         {
             if (ModelState.IsValid)
             {
-                db.Times.Add(time);
+                db.Tecnicos.Add(tecnico);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(time);
+            return View(tecnico);
         }
 
         public ActionResult Editar(int id)
         {
-            var time = db.Times.Find(id);
-            return View(time);
+            var tecnico = db.Tecnicos.Find(id);
+            return View(tecnico);
         }
 
         [HttpPost]
-        public ActionResult Editar(Time time)
+        public ActionResult Editar(Tecnico tecnico)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(time).State = EntityState.Modified;
+                db.Entry(tecnico).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(time);
+            return View(tecnico);
         }
 
         public ActionResult Excluir(int id)
         {
-            var time = db.Times.Find(id);
-            return View(time);
+            var tecnico = db.Tecnicos.Find(id);
+            return View(tecnico);
         }
 
         [HttpPost, ActionName("Excluir")]
         public ActionResult ConfirmaExcluir(int id)
         {
-            var time = db.Times.Find(id);
-            db.Times.Remove(time);
+            var tecnico = db.Tecnicos.Find(id);
+            db.Tecnicos.Remove(tecnico);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
 
         public ActionResult Detalhes(int id)
         {
-            var time = db.Times.Find(id);
-            return View(time);
+            var tecnico = db.Tecnicos.Find(id);
+            return View(tecnico);
         }
     }
 }
