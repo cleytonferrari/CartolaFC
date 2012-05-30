@@ -1,0 +1,33 @@
+﻿@model CartolaFC.Models.Time
+@{
+    ViewBag.Title = "Detalhes";
+}
+<h2>
+    Detalhes</h2>
+<fieldset>
+    <legend>Time</legend>
+    <div>
+        @Html.LabelFor(model => model.Nome)
+    </div>
+    <div>
+        @Html.DisplayFor(model => model.Nome)
+    </div>
+
+    <div>
+        @Html.LabelFor(model => model.AnoDeFundacao)
+    </div>
+    <div>
+        @Html.DisplayFor(model => model.AnoDeFundacao)
+    </div>
+    
+    <div>
+        @Html.LabelFor(model => model.Descricao)
+    </div>
+    <div>
+        @Html.DisplayFor(model => model.Descricao)
+    </div>
+</fieldset>
+<p>
+    <a href="@Url.Action("Editar", "Time", new { id = Model.TimeId })" class="voltar">Editar</a>
+    <a href="@Url.Action("Index", "Time")" class="voltar">Voltar</a>
+</p>

@@ -1,0 +1,32 @@
+﻿@model CartolaFC.Models.Time
+@{
+    ViewBag.Title = "Excluir";
+}
+
+<h2>Excluir</h2>
+<h3>Deseja mesmo excluir?</h3>
+<fieldset>
+    <legend>Time</legend>
+    <div>
+        @Html.LabelFor(model=>model.Nome)
+    </div>
+    <div>
+        @Html.DisplayFor(model=>model.Nome)
+    </div>
+    
+    <div>
+        @Html.LabelFor(model=>model.AnoDeFundacao)
+    </div>
+    <div>
+        @Html.DisplayFor(model=>model.AnoDeFundacao)
+    </div>
+</fieldset>
+@using(Html.BeginForm())
+{
+    <p>
+        <input type="submit" value="Excluir"/>
+        <a href="@Url.Action("Index","Time")" class="voltar">Voltar</a>
+    </p>
+}
+
+
