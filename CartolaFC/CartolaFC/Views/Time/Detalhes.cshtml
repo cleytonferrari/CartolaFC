@@ -12,19 +12,29 @@
     <div>
         @Html.DisplayFor(model => model.Nome)
     </div>
-
     <div>
         @Html.LabelFor(model => model.AnoDeFundacao)
     </div>
     <div>
         @Html.DisplayFor(model => model.AnoDeFundacao)
     </div>
-    
     <div>
         @Html.LabelFor(model => model.Descricao)
     </div>
     <div>
         @Html.DisplayFor(model => model.Descricao)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Tecnico.Nome)
+    </div>
+    <div>
+        @Html.DisplayFor(model => model.Tecnico.Nome)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Tecnico.Descricao)
+    </div>
+    <div>
+        @Html.DisplayFor(model => model.Tecnico.Descricao)
     </div>
 </fieldset>
 <p>

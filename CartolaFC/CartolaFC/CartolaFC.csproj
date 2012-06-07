@@ -83,6 +83,10 @@
     <Compile Include="Migrations\201205300116533_CriadoTecnico.Designer.cs">
       <DependentUpon>201205300116533_CriadoTecnico.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201206070026506_AddTecnicoAoTime.cs" />
+    <Compile Include="Migrations\201206070026506_AddTecnicoAoTime.Designer.cs">
+      <DependentUpon>201206070026506_AddTecnicoAoTime.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Tecnico.cs" />
     <Compile Include="Models\Time.cs" />
